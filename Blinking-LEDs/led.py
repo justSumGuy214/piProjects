@@ -43,7 +43,7 @@ def turnOnLed(led):
         GPIO.output(led, 0)
         GPIO.cleanup()
 
-	      GPIO.setmode(GPIO.BOARD)
+	GPIO.setmode(GPIO.BOARD)
         GPIO.setup(led, GPIO.OUT)
         GPIO.output(led, 1)
         time.sleep(.75)
@@ -56,7 +56,7 @@ def turnOnLed(led):
 while cond == 1:
 	answer = raw_input('Turn on 1. green , 2.red or 3.yellow, press x to quit: ')
 	if answer == '1':
-		    turnOnLed(gled)
+		turnOnLed(gled)
                 cond = 1
         elif answer == '2':
                 turnOnLed(rled)
